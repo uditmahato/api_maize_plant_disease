@@ -55,4 +55,4 @@ Contributions to this project are welcome. If you'd like to contribute, please f
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [Apache License 2.0](LICENSE).
