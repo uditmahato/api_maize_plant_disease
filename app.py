@@ -40,8 +40,6 @@ Note: add "/docs" to the URL to get the Swagger UI Docs or "/redoc"
   """
     return note
 
-
-favicon_path = "favicon.png"
 @app.post("/predict")
 async def root(file: UploadFile = File(...)):
     """
