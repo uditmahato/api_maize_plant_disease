@@ -1,7 +1,6 @@
 import numpy as np
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import PlainTextResponse
-import numpy as np
 import io
 from PIL import Image
 import cv2
@@ -53,9 +52,6 @@ async def root(file: UploadFile = File(...)):
     Returns:
         The prediction and confidence level of the model in json format
     """
-
-    #contents = io.BytesIO(await file.read())
-    #file_bytes = np.asarray(bytearray(contents.read()), dtype=np.uint8)
     file_bytes = np.asarray(bytearray(await file.read()), dtype=np.uint8)
     img = cv2.imdecode(file_bytes, 1)
     
